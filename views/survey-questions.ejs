@@ -88,7 +88,7 @@ http://www.tooplate.com/view/2100-artist
         <p><%= survey.image_tag %></p>
         <img src='<%= survey.image_link %>' />
     <%})%>
-</body> -->
+</body>  -->
              
                <table>
                     <tr >
@@ -96,10 +96,13 @@ http://www.tooplate.com/view/2100-artist
                               <div class="wow fadeInUp col-md-3 col-sm-6" data-wow-delay="0.4s" >
                                    <div  class="row">
                                            <ul>
+                                             <%surveyList. forEach (survey => {%>
                                                 <li><input type="checkbox" id="cb1"/>
-                                                    <label for ="cb1"><%surveyList. forEach (survey => {%>
+                                                    <label for ="cb1">
+                                                       <p><%= survey.image_id %></p>
+                                                       <p><%= survey.image_tag %></p>
                                                         <img src='<%= survey.image_link %>' />
-                                                    <%})%></label>
+                                             <%})%></label>
                                                 </li>
                                            </ul>
                                            <!-- <input type="checkbox" class="checkbox" id="check1">-->

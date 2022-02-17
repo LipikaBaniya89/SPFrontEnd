@@ -13,10 +13,17 @@ const surveySchema = {
     image_link : String
 }
 
+const dogSchema = {
+    image_id1 : Number,
+    image_tag1 : String,
+    image_link1 : String
+}
+
 const Survey = mongoose.model ('Survey', surveySchema);
+const DogSurvey = mongoose.model('DogSurvey', dogSchema );
 
 // Get cats
-app.get('/cats' , (req , res) => {
+app.get('/survey-questions' , (req , res) => {
    Survey.find({}, function(err, surveys) {
        res.render('survey-questions', {
            surveyList : surveys
@@ -25,6 +32,17 @@ app.get('/cats' , (req , res) => {
    })
 
 })
+
+// Get dogs
+app.get('/dog-survey' , (req , res) => {
+    DogSurvey.find({}, function(err, dogs) {
+        res.render('dog-survey', {
+            dogList : dogs
+        })
+ 
+    })
+ 
+ })
 
 //Get index
 app.get('/index' , (req , res) => {
@@ -36,6 +54,11 @@ app.get('/index' , (req , res) => {
 app.get('/survey' , (req , res) => {
     res.render('survey')
 });
+
+//Get profile
+app.get ('/profile', (req , res) => {
+    res.render ('profile')
+})
 
 
 app .listen(4000,  () => {
