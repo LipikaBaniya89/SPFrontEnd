@@ -21,13 +21,13 @@ http://www.tooplate.com/view/2100-artist
 <meta name="author" content="Tooplate">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<link rel="stylesheet" href="public/css/bootstrap.min.css">
-<link rel="stylesheet" href="public/css/animate.css">
-<link rel="stylesheet" href="public/css/magnific-popup.css">
-<link rel="stylesheet" href="public/css/font-awesome.min.css">
+<link rel="stylesheet" href="/public/css/bootstrap.min.css">
+<link rel="stylesheet" href="/public/css/animate.css">
+<link rel="stylesheet" href="/public/css/magnific-popup.css">
+<link rel="stylesheet" href="/public/css/font-awesome.min.css">
 
 <!-- Main css -->
-<link rel="stylesheet" href="public/css/tooplate-style.css">
+<link href="/public/css/tooplate-style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
@@ -45,9 +45,9 @@ http://www.tooplate.com/view/2100-artist
     <div class="container-fluid">
         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
             <div class="navbar-nav navbar-right">  
-                <a href="index.ejs" class="nav-item nav-link active is-active" active-color="cyan">Home</a>
-                <a href="survey.ejs" class="nav-item nav-link" active-color="cyan">Survey</a>
-                <a href="profile.ejs" class="nav-item nav-link" active-color="cyan">Profile</a>
+                <a href="index" class="nav-item nav-link active is-active" active-color="cyan">Home</a>
+                <a href="survey" class="nav-item nav-link" active-color="cyan">Survey</a>
+                <a href="profile" class="nav-item nav-link" active-color="cyan">Profile</a>
                 <b>|</b>
                 <button class="loginbtn" name="login">Join now</button>
                 <label class="switch-theme">
@@ -114,13 +114,6 @@ http://www.tooplate.com/view/2100-artist
     </div>
 </section>
 
-<body>
-    <%surveyList. forEach (survey => {%>
-        <p><%= survey.image_id %></p>
-        <p><%= survey.image_tag %></p>
-        <img src='<%= survey.image_link %>' />
-    <%})%>
-</body>
 
 
 <!--Survey-->
